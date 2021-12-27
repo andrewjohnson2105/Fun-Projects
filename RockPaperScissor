@@ -1,0 +1,37 @@
+# A friendly game of Rock, Paper, Scissors
+
+#Importing Random Class Function
+from random import choice
+
+#Defining the list
+list = ['Rock','Paper','Scissors']
+
+#Choosing your choice
+print('Choose Rock, Paper, or Scissors.')
+rps = str(input())
+
+if (rps == 'Rock' or rps == 'Paper' or rps == 'Scissors'):
+    print('You have chosen ',rps)
+
+
+    #CPU Choosing its choice
+    cpu = choice(list)
+    print ('I choose ', cpu)
+
+    #Determine the winner
+    if (rps == cpu):
+        print('We tied.')
+    elif (rps == 'Rock' and cpu == 'Scissors'):
+        print('You win!')
+    elif (rps == 'Rock' and cpu == 'Paper'):
+        print('You lose!')
+    elif (rps == 'Paper' and cpu == 'Scissors'):
+        print('You win!')
+    elif (rps == 'Paper' and cpu == 'Rock'):
+        print('You lose!')
+    elif (rps == 'Scissors' and cpu == 'Paper'):
+        print('You win!')
+    elif (rps == 'Scissors' and cpu == 'Rock'):
+        print('You lose!')
+else:
+    print('You have chosen poorly')
